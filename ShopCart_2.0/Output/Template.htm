@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\..\Output\Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\..\Output\Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5040049: Last Updated: Sun Apr 07 14:24:49 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5040049: Last Updated: Sun Apr 07 16:31:56 2019
 <BR><P>
 <H3>Maximum Stack Usage =        272 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -316,11 +316,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[52]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShowGoods_Menu
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShowGoods_Menu
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Goods
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MakeLabel_Goods
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Add_Goods
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
 </UL>
 
 <P><STRONG><a name="[c7]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
@@ -389,8 +389,7 @@ Global Symbols
 <P><STRONG><a name="[63]"></a>Check_Code</STRONG> (Thumb, 170 bytes, Stack size 32 bytes, module.o(i.Check_Code))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = Check_Code &rArr; LCD_ClearLine &rArr; ILI9341_Clear &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
@@ -398,7 +397,8 @@ Global Symbols
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysPrint
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ClearLine
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -478,9 +478,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[97]"></a>Get_ShopCart_HeadGoods_Count</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, supermarket.o(i.Get_ShopCart_HeadGoods_Count))
-<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShowGoods_Menu
+<BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Control
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShowGoods_Menu
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pay_Menu
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Control
 </UL>
 
 <P><STRONG><a name="[7d]"></a>Get_ShopCart_Number</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, supermarket.o(i.Get_ShopCart_Number))
@@ -522,12 +522,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_OpenWindow
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_FillColor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ClearLine
-<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Control
+<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Control
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Cmd
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ClearLine
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
 <P><STRONG><a name="[82]"></a>ILI9341_DispChar_EN</STRONG> (Thumb, 138 bytes, Stack size 40 bytes, bsp_ili9341_lcd.o(i.ILI9341_DispChar_EN))
@@ -568,10 +568,10 @@ Global Symbols
 <P><STRONG><a name="[89]"></a>ILI9341_Init</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, bsp_ili9341_lcd.o(i.ILI9341_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ILI9341_Init &rArr; ILI9341_GPIO_Config &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_BackLed_Control
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GramScan
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_BackLed_Control
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_REG_Config
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GPIO_Config
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GramScan
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -582,24 +582,24 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Write_Data
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Write_Cmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispChar_EN
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispChar_EN
 </UL>
 
 <P><STRONG><a name="[83]"></a>ILI9341_Write_Cmd</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, bsp_ili9341_lcd.o(i.ILI9341_Write_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_OpenWindow
+<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GramScan
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_OpenWindow
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispChar_EN
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_REG_Config
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_FillColor
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GramScan
 </UL>
 
 <P><STRONG><a name="[84]"></a>ILI9341_Write_Data</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, bsp_ili9341_lcd.o(i.ILI9341_Write_Data))
-<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_OpenWindow
+<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GramScan
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_OpenWindow
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispChar_EN
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_REG_Config
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_FillColor
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GramScan
 </UL>
 
 <P><STRONG><a name="[8c]"></a>IO_Init</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, io.o(i.IO_Init))
@@ -622,13 +622,13 @@ Global Symbols
 <P><STRONG><a name="[94]"></a>KEY_Control</STRONG> (Thumb, 484 bytes, Stack size 8 bytes, key.o(i.KEY_Control))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = KEY_Control &rArr; Buy_Goods &rArr; ShopCart_AddGoods &rArr; Add_Goods &rArr; ShopCart_FindGoods &rArr; strcmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Control
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Control
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cancel_Goods
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buy_Goods
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;User_Initial
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Print_ShopCart
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ShopCart_HeadGoods_Count
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -652,15 +652,16 @@ Global Symbols
 <P><STRONG><a name="[67]"></a>LCD_ClearLine</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, bsp_ili9341_lcd.o(i.LCD_ClearLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = LCD_ClearLine &rArr; ILI9341_Clear &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
 <P><STRONG><a name="[66]"></a>LCD_GetFont</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bsp_ili9341_lcd.o(i.LCD_GetFont))
-<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Menu
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShowGoods_Menu
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pay_Menu
@@ -670,7 +671,6 @@ Global Symbols
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Menu
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ClearLine
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
 </UL>
 
 <P><STRONG><a name="[6d]"></a>LCD_SetColors</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, bsp_ili9341_lcd.o(i.LCD_SetColors))
@@ -769,19 +769,19 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[5c]"></a>Print_ShopCart</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, supermarket.o(i.Print_ShopCart))
-<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buy_Goods
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Module_Init
+<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Module_Init
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Control
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buy_Goods
 </UL>
 
 <P><STRONG><a name="[8d]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Confing
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Confing
 </UL>
 
 <P><STRONG><a name="[86]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GPIO_Config
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_GPIO_Config
 </UL>
 
 <P><STRONG><a name="[57]"></a>RCC_BackupResetCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_BackupResetCmd))
@@ -827,8 +827,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ab]"></a>RTC_GetCounter</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_rtc.o(i.RTC_GetCounter))
-<BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
 </UL>
 
 <P><STRONG><a name="[a9]"></a>RTC_GetITStatus</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32f10x_rtc.o(i.RTC_GetITStatus))
@@ -929,7 +929,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[50]"></a>SysPrint</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, supermarket.o(i.SysPrint))
-<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;User_Initial
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;User_Initial
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShopCart_IsEmpty
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShopCart_Initial
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShopCart_DelGoods
@@ -940,16 +941,15 @@ Global Symbols
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShopCart_FindGoods
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Add_Goods
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
 </UL>
 
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 184 bytes, Stack size 8 bytes, stm32f10x_it.o(i.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = SysTick_Handler &rArr; LCD_ClearLine &rArr; ILI9341_Clear &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysPrint
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysPrint
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ClearLine
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Clear
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
@@ -1055,7 +1055,8 @@ Global Symbols
 <P><STRONG><a name="[69]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf3.o(i.__0sprintf$3))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2sprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Menu
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShowGoods_Menu
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pay_Menu
@@ -1063,7 +1064,6 @@ Global Symbols
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Home_Menu
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_PayCode
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Menu
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Code
 </UL>
 
 <P><STRONG><a name="[cb]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
@@ -1255,11 +1255,11 @@ Local Symbols
 <P><STRONG><a name="[6b]"></a>Check_Menu</STRONG> (Thumb, 94 bytes, Stack size 40 bytes, menu.o(i.Check_Menu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Check_Menu &rArr; ILI9341_DispStringLine_EN &rArr; ILI9341_DispChar_EN &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColors
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispStringLine_EN
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_Menu
 </UL>
@@ -1267,11 +1267,11 @@ Local Symbols
 <P><STRONG><a name="[6f]"></a>Check_PayCode</STRONG> (Thumb, 132 bytes, Stack size 40 bytes, menu.o(i.Check_PayCode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Check_PayCode &rArr; ILI9341_DispStringLine_EN &rArr; ILI9341_DispChar_EN &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColors
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispStringLine_EN
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_Menu
 </UL>
@@ -1279,14 +1279,14 @@ Local Symbols
 <P><STRONG><a name="[75]"></a>Home_Menu</STRONG> (Thumb, 234 bytes, Stack size 64 bytes, menu.o(i.Home_Menu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = Home_Menu &rArr; Time_Mark &rArr; ILI9341_DispStringLine_EN &rArr; ILI9341_DispChar_EN &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ShopCart_Value
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ShopCart_Number
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColors
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispStringLine_EN
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_Menu
 </UL>
@@ -1294,12 +1294,12 @@ Local Symbols
 <P><STRONG><a name="[77]"></a>Manager_Menu</STRONG> (Thumb, 140 bytes, Stack size 40 bytes, menu.o(i.Manager_Menu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = Manager_Menu &rArr; Time_Mark &rArr; ILI9341_DispStringLine_EN &rArr; ILI9341_DispChar_EN &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColors
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispStringLine_EN
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_Menu
 </UL>
@@ -1307,8 +1307,7 @@ Local Symbols
 <P><STRONG><a name="[76]"></a>Pay_Menu</STRONG> (Thumb, 226 bytes, Stack size 48 bytes, menu.o(i.Pay_Menu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = Pay_Menu &rArr; ShowGoods_Menu &rArr; Time_Mark &rArr; ILI9341_DispStringLine_EN &rArr; ILI9341_DispChar_EN &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShowGoods_Menu
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ShopCart_Value
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ShopCart_Number
@@ -1317,6 +1316,7 @@ Local Symbols
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColors
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispStringLine_EN
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_Menu
 </UL>
@@ -1324,8 +1324,7 @@ Local Symbols
 <P><STRONG><a name="[78]"></a>ShowGoods_Menu</STRONG> (Thumb, 244 bytes, Stack size 72 bytes, menu.o(i.ShowGoods_Menu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = ShowGoods_Menu &rArr; Time_Mark &rArr; ILI9341_DispStringLine_EN &rArr; ILI9341_DispChar_EN &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ShopCart_HeadGoods_Count
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ShopCart_HeadGoods
@@ -1336,20 +1335,21 @@ Local Symbols
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColors
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispStringLine_EN
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pay_Menu
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_Menu
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_Menu
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pay_Menu
 </UL>
 
 <P><STRONG><a name="[74]"></a>System_Menu</STRONG> (Thumb, 86 bytes, Stack size 40 bytes, menu.o(i.System_Menu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = System_Menu &rArr; Time_Mark &rArr; ILI9341_DispStringLine_EN &rArr; ILI9341_DispChar_EN &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Time_Mark
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColors
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispStringLine_EN
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_Menu
 </UL>
@@ -1357,11 +1357,11 @@ Local Symbols
 <P><STRONG><a name="[7b]"></a>Time_Mark</STRONG> (Thumb, 62 bytes, Stack size 64 bytes, menu.o(i.Time_Mark))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = Time_Mark &rArr; ILI9341_DispStringLine_EN &rArr; ILI9341_DispChar_EN &rArr; ILI9341_OpenWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetFont
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColors
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_DispStringLine_EN
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetFont
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Menu
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ShowGoods_Menu

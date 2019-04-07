@@ -30,5 +30,4 @@ static void Manager_Menu(void);
 static void ShowGoods_Menu(void);
 
 
-
 #endif
