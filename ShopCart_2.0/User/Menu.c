@@ -10,6 +10,7 @@
    3 : Pay_Menu
    4 : Manager_Menu
    5 : ShowGoods_Menu
+   6 £ºCheck_PayCode
 */
 u8 Display_Index = 0;
 
@@ -26,6 +27,7 @@ void Display_Menu(void)
 		case 3 : Pay_Menu();       break;
 		case 4 : Manager_Menu();   break;
 		case 5 : ShowGoods_Menu(); break;
+		case 6 : Check_PayCode();  break;
 	}
 }
 
@@ -103,6 +105,11 @@ static void Check_Menu(void)
 	
 }
 
+
+static void Check_PayCode(void)
+{
+	
+}
 
 static void Pay_Menu(void)
 {
