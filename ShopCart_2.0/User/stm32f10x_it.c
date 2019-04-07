@@ -140,15 +140,16 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
 	static u8  KEY_Time = 0;
-	static u8  Display_Time = 0;
+	static u8  Display_Time = 0; 
 	static u16 WaitTime_3s = 0;
 	
-	if((Display_Index == 2) || (Display_Index == 3) || (Display_Index == 5) )			//在询问窗口超过5秒未响应，自动跳转回Home界面
+	if((Display_Index == 2) || (Display_Index == 3) || (Display_Index == 5) || (Display_Index == 6) )			//在询问窗口超过5秒未响应，自动跳转回Home界面
 	{
 		if(++WaitTime_3s >= 5000)
 		{
 			WaitTime_3s = 0;
 			Display_Index = 1;
+			LCD_ClearLine(LINE(7));
 			ILI9341_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);	/* 清屏，显示全黑 */
 			SysPrint((u8 *)"The action has been canceled !");
 		}

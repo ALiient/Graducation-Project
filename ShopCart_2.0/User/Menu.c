@@ -108,7 +108,19 @@ static void Check_Menu(void)
 
 static void Check_PayCode(void)
 {
+	u8 String_1[30];
 	
+	LCD_SetFont(&Font16x24);
+	
+	LCD_SetColors(RED,WHITE);
+	sprintf((char *)String_1, "   $$$$$$$$$$$$$$");
+	ILI9341_DispStringLine_EN(LINE(3),(char *)String_1);
+	LCD_SetColors(BLUE,WHITE);
+	sprintf((char *)String_1, "   Show the Code");
+	ILI9341_DispStringLine_EN(LINE(5),(char *)String_1);
+	LCD_SetColors(RED,WHITE);
+	sprintf((char *)String_1, "   $$$$$$$$$$$$$$");
+	ILI9341_DispStringLine_EN(LINE(7),(char *)String_1);
 }
 
 static void Pay_Menu(void)

@@ -25,6 +25,7 @@ static void System_Menu(void);
 static void Home_Menu(void);
 static void Check_Menu(void);
 static void Pay_Menu(void);
+static void Check_PayCode(void);
 static void Manager_Menu(void);
 static void ShowGoods_Menu(void);
 
