@@ -10,3 +10,6 @@ E:\毕业论文\Something\上位机\SuperMarket\SuperMarket\obj\Debug\SuperMarke
 E:\毕业论文\Something\上位机\SuperMarket\SuperMarket\bin\Debug\MySql.Data.dll
 E:\毕业论文\Something\上位机\SuperMarket\SuperMarket\bin\Debug\Google.Protobuf.dll
 E:\毕业论文\Something\上位机\SuperMarket\SuperMarket\bin\Debug\MySql.Data.xml
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\bin\Debug\SuperMarket.exe.config
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\obj\Debug\SuperMarket.exe
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\obj\Debug\SuperMarket.pdb
