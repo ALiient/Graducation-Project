@@ -39,7 +39,7 @@ bool Check_Code(u8 *Code_Data)
 	}else															//正常扫码验证商品
 	{
 		SysPrint((u8 *)"Get code successful !");
-		strncpy((char *)Data_Pack, (char *)Code_Data + 0, 8);			//拷贝前七个字符
+		strncpy((char *)Data_Pack, (char *)Code_Data + 0, 8);			//拷贝前八个字符
 		sprintf((char *)String_Text, "%c%s%c", 'A', Data_Pack, 'B');	//添加包头A和包尾B
 		strcpy((char *)Data_Pack, (char *)String_Text);					//打包至In_Code
 	
