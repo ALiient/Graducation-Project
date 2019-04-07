@@ -13,3 +13,12 @@ E:\毕业论文\Something\上位机\SuperMarket\SuperMarket\bin\Debug\MySql.Data
 E:\毕业论文\Something\Project\SuperMarket\SuperMarket\bin\Debug\SuperMarket.exe.config
 E:\毕业论文\Something\Project\SuperMarket\SuperMarket\obj\Debug\SuperMarket.exe
 E:\毕业论文\Something\Project\SuperMarket\SuperMarket\obj\Debug\SuperMarket.pdb
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\bin\Debug\SuperMarket.exe
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\bin\Debug\SuperMarket.pdb
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\bin\Debug\MySql.Data.dll
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\bin\Debug\Google.Protobuf.dll
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\bin\Debug\MySql.Data.xml
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\obj\Debug\SuperMarket.csprojResolveAssemblyReference.cache
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\obj\Debug\SuperMarket.Form1.resources
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\obj\Debug\SuperMarket.Properties.Resources.resources
+E:\毕业论文\Something\Project\SuperMarket\SuperMarket\obj\Debug\SuperMarket.csproj.GenerateResource.Cache

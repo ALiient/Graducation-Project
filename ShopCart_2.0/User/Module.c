@@ -3,8 +3,9 @@
 #include "Module.h"
 
 u8 Del_Index = 1;
+u8 Action_Pay = 0;
 
-u8 In_Code[20];
+u8 In_Code[50];
 u8 Out_Code[20];
 u8 String_Text[40];
 
@@ -24,13 +25,29 @@ bool Check_Code(u8 *Code_Data)
 		return false;
 	
 	strcpy((char *)In_Code, (char *)Code_Data);						//拷贝商品条形码
-	SysPrint((u8 *)"Get code successful !");
-	strncpy((char *)Data_Pack, (char *)Code_Data + 0, 7);			//拷贝前七个字符
-	sprintf((char *)String_Text, "%c%s%c", 'A', Data_Pack, 'B');	//添加包头A和包尾B
-	strcpy((char *)Data_Pack, (char *)String_Text);					//打包至In_Code
 	
-	printf("%s", Data_Pack);										//购物车模式下，发送条码进行商品查询
-																	//管理模式下，直接发送条码信息,选择删除或添加
+	if( (Display_Index == 6) && (Action_Pay == 1) )											//处于结算扫码界面
+	{
+		if( (In_Code[0] == 'h') && (In_Code[4] == 's') )			//付款码
+		{
+			Pay_ShopCart(ShopCart);									//确认结算购物车
+			Action_Pay = 0;
+			Display_Index = 1;
+			LCD_ClearLine(LINE(7));
+			ILI9341_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);			/* 清屏，显示全黑 */
+		}
+	}else															//正常扫码验证商品
+	{
+		SysPrint((u8 *)"Get code successful !");
+		strncpy((char *)Data_Pack, (char *)Code_Data + 0, 8);			//拷贝前七个字符
+		sprintf((char *)String_Text, "%c%s%c", 'A', Data_Pack, 'B');	//添加包头A和包尾B
+		strcpy((char *)Data_Pack, (char *)String_Text);					//打包至In_Code
+	
+		printf("%s", Data_Pack);										//购物车模式下，发送条码进行商品查询
+																		//管理模式下，直接发送条码信息,选择删除或添加
+	}
+	
+	
 	return true;
 }
 

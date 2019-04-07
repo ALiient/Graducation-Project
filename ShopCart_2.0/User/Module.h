@@ -5,9 +5,10 @@
 #include "IO.h"
 
 
-extern u8 In_Code[20];
+extern u8 In_Code[50];
 extern u8 Out_Code[20];
 extern u8 Del_Index;
+extern u8 Action_Pay;
 
 void Module_Init(void);
 bool Check_Code(u8 *In_Code);

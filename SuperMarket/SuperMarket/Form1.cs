@@ -87,12 +87,12 @@ namespace SuperMarket
             if (User)
             {
                 label4.Text = "Manager";
-                button3.BackgroundImage = Image.FromFile(@"E:\毕业论文\Something\上位机\SuperMarket\Manager.png");
+                button3.BackgroundImage = Image.FromFile(@"E:\毕业论文\Something\Project\SuperMarket\Manager.png");
             }
             else
             {
                 label4.Text = "Customer";
-                button3.BackgroundImage = Image.FromFile(@"E:\毕业论文\Something\上位机\SuperMarket\Customer.png");
+                button3.BackgroundImage = Image.FromFile(@"E:\毕业论文\Something\Project\SuperMarket\Customer.png");
             }
 
             //读取数据库数据至表格
@@ -245,7 +245,7 @@ namespace SuperMarket
 
         private void Play_Tips(String Tips)
         {
-            sp.SoundLocation = @"E:\毕业论文\Something\上位机\SuperMarket\" + Tips + ".wav";
+            sp.SoundLocation = @"E:\毕业论文\Something\Project\SuperMarket\" + Tips + ".wav";
             sp.Play();
         }
 
@@ -271,11 +271,11 @@ namespace SuperMarket
                 this.Invoke((EventHandler)(delegate         //Invoke同步
                 {
                     Data_Pack += Serial_String;
-                    if (Data_Pack.Length == 9)
+                    if (Data_Pack.Length == 10)
                     {
-                        if ((Data_Pack[0] == 'A') && (Data_Pack[8] == 'B'))     //正确的数据包
+                        if ((Data_Pack[0] == 'A') && (Data_Pack[9] == 'B'))     //正确的数据包
                         {
-                            String Goods_Code = Data_Pack.Substring(1, 7);      //截取数据包中的条码信息
+                            String Goods_Code = Data_Pack.Substring(1, 8);      //截取数据包中的条码信息
 
                             if (Check_Goods(Goods_Code))                        //查询到存在的商品，Customer和Manager分别有不同的操作
                             {
@@ -404,7 +404,7 @@ namespace SuperMarket
             label2.Text = "";
             pictureBox4.Visible = false;
             pictureBox5.Visible = true;     //重置条码框
-            button3.BackgroundImage = Image.FromFile(@"E:\毕业论文\Something\上位机\SuperMarket\" + User_Mode + ".png");
+            button3.BackgroundImage = Image.FromFile(@"E:\毕业论文\Something\Project\SuperMarket\" + User_Mode + ".png");
         }
 
         private void button3_Click(object sender, EventArgs e)

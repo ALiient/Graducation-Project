@@ -86,10 +86,8 @@ void KEY_Control(void)
 			ILI9341_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);	/* 清屏，显示全黑 */
 		}else if(Display_Index == 3)						//位于结算界面，确认结算
 		{
-//			Pay_ShopCart(ShopCart);							//确认结算购物车
-//			Display_Index = 1;
-			
-			Display_Index = 6;
+			Action_Pay = 1;
+			Display_Index = 6;								//跳转至结算扫码界面
 			ILI9341_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);	/* 清屏，显示全黑 */
 			
 		}else if(Display_Index == 5)						//位于商品列表（删除界面）

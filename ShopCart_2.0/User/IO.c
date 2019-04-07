@@ -2,7 +2,7 @@
 #include "IO.h"
 
 
-u8 RxBuffer1[20];
+u8 RxBuffer1[50];
 u8 RxBuffer2[20];
 u8 Flag_USART1 = 0;
 u8 Flag_USART2 = 0;
@@ -46,8 +46,8 @@ static void GPIO_Config(void)
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;		//UASRT2 TX2
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; //推挽复用模式
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;				//UASRT2 TX2
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; 		//推挽复用模式
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
@@ -116,16 +116,16 @@ static void USART2_Config(void)
 	USART_InitTypeDef USART_InitStructure;
 	
 		//串口2工作模式配置
-	USART_InitStructure.USART_BaudRate = 9600;			//配置波特率19200		
+	USART_InitStructure.USART_BaudRate = 9600;						//配置波特率19200		
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;		//配置帧数据字长
 	USART_InitStructure.USART_StopBits = USART_StopBits_1;			//配置停止位
 	USART_InitStructure.USART_Parity = USART_Parity_No;				//配置校验位
 	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;		//配置硬件流控制
 	USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;	//配置工作模式，收发一起
-	USART_Init(USART2, &USART_InitStructure);		//完成串口初始化配置
+	USART_Init(USART2, &USART_InitStructure);						//完成串口初始化配置
 	
-	USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);	//使能串口2接收中断
-	USART_Cmd(USART2, ENABLE);		//使能串口
+	USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);					//使能串口2接收中断
+	USART_Cmd(USART2, ENABLE);										//使能串口
 		
 }
 

@@ -27,6 +27,8 @@
 #include "stm32f10x_it.h"
 #include "IO.h"
 
+u8 Rx_Cnt = 17;
+
 extern u32 TimingDelay;
 
 /** @addtogroup STM32F10x_StdPeriph_Template
@@ -149,6 +151,7 @@ void SysTick_Handler(void)
 		{
 			WaitTime_3s = 0;
 			Display_Index = 1;
+			Action_Pay = 0;
 			LCD_ClearLine(LINE(7));
 			ILI9341_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);	/* ÇåÆÁ£¬ÏÔÊ¾È«ºÚ */
 			SysPrint((u8 *)"The action has been canceled !");
@@ -179,17 +182,22 @@ void USART1_IRQHandler(void)
 {
 	static __IO uint8_t str_num = 0;
 	
-  if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
-  {
-    /* Read one byte from the receive data register */
-    RxBuffer1[str_num++] = USART_ReceiveData(USART1);
+	if(Action_Pay == 1)
+		Rx_Cnt = 48;
+	else
+		Rx_Cnt = 17;
 	
-	if(str_num >= 17)
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
 	{
-		str_num = 0;
-		Flag_USART1 = 1;
+    /* Read one byte from the receive data register */
+		RxBuffer1[str_num++] = USART_ReceiveData(USART1);
+	 
+		if(str_num >= Rx_Cnt)
+		{
+			str_num = 0;
+			Flag_USART1 = 1;
+		}
 	}
-  }
   
 }
 

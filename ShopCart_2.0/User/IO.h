@@ -31,7 +31,7 @@ static void USART1_Config(void);
 static void USART2_Config(void);
 static void RTC_Confing(void);
 
-extern u8 RxBuffer1[20];
+extern u8 RxBuffer1[50];
 extern u8 RxBuffer2[20];
 extern u8 Flag_USART1;
 extern u8 Flag_USART2;
