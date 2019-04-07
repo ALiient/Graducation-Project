@@ -13,7 +13,6 @@ extern u8 Flag_BEEP;
 void BEEP_Init(void);
 void BEEP_Click(void);
 
-// how to say , JiangTou
 
 
 #endif
